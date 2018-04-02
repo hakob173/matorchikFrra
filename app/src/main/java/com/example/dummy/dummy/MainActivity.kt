@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         RxView.clicks(activity_main_btn_turn_left)
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    RotateApi.rotate(RotationDirection.LEFT,activity_main_et_rotation_duration.text.toString().toLongOrNull())
+                    RotateApi.rotate(RotationDirection.LEFT,activity_main_et_step_count.text.toString().toLongOrNull())
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe({
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         RxView.clicks(activity_main_btn_turn_right)
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .subscribe({
-                    RotateApi.rotate(RotationDirection.LEFT,activity_main_et_rotation_duration.text.toString().toLongOrNull())
+                    RotateApi.rotate(RotationDirection.LEFT,activity_main_et_step_count.text.toString().toLongOrNull())
                             .subscribeOn(Schedulers.io())
                             .observeOn(AndroidSchedulers.mainThread())
                             .subscribe({

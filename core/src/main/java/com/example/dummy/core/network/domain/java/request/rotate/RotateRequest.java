@@ -7,14 +7,14 @@ public class RotateRequest {
     @JsonProperty("direction")
     private RotationDirection rotationDirection;
 
-    @JsonProperty("duration")
-    private Long duration;
+    @JsonProperty("stepCount")
+    private Long stepCount;
 
     public RotateRequest() {
     }
 
     public RotateRequest(RotationDirection rt,Long dr) {
         rotationDirection = rt;
-        duration = dr;
+        stepCount = dr;
     }
 }
